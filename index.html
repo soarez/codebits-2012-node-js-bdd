@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Codebits2012 - Node.js BDD</title>
+    <meta name="apple-mobile-web-app-capable"
+      content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="res/theme.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+    <script>
+      document.write('<link rel="stylesheet" href="reveal.js/css/print/'
+        + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' )
+        + '.css" type="text/css" media="print">' );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <span class="handle">@igorsoarez</span>
+    <img class="r42" src="res/r42.png"/>
+  
+    <div class="reveal">
+      <div class="slides">
+        <section></section>
+        
+        <section>
+          <section>
+            <h1>Hai!</h1>
+          </section>
+          <section> 
+            <div>
+              <img src="res/swat.png" style="height: 150px" />
+              <h3>We turn bright ideas</h3>
+              <h6>Into amazing web products</h6>
+            </div>
+            <div class="fragment">
+              <img src="res/rupeal.jpg" style="height: 150px" />
+              <h4>Making IT simple</h4>
+            </div>    
+          </section>
+          <section> 
+            <img src="res/r42.png" style="height: 200px" />
+            <h3 class="fragment">Fun comes first!</h3>
+          </section>
+        </section>  
+        
+        <section>
+          <section>
+            <img src="res/x-all-the-things-template.jpg" />
+          </section>
+          <section>
+            <img src="res/speed.jpg" style="height: 400px;" />
+            <ul>
+              <li class="fragment">Energy - Work</li>
+              <li class="fragment">Curiosity - Learn</li>
+              <li class="fragment">Creativity - Inovate</li>
+            </ul>
+          </section>
+          <section>
+            <img src="res/node.png"
+            style="background-color: #46483E; height: 400px;" />
+            <br />
+            <img class="fragment" src="res/check.svg" style="height: 100px" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Tests!</h2>
+            <ul>
+              <li class="fragment">provide a safety net for developers</li>
+              <li class="fragment">make developers feel more confident
+                 -- less FUD</li>
+              <li class="fragment">can boost development speed if done properly</li>
+              <li class="fragment">will help newcomers understand the code faster</li>
+              <li class="fragment">tend to help developers think better about the problems
+                hey are trying to solve</li>
+            </ul>
+          </section>
+          <section>
+            <img src="res/tattg.jpg" style="height: 500px" />
+          </section>
+          <section>
+            <img src="res/tattb.jpg" style="height: 500px" />
+          </section>
+          <section>
+            <img src="res/dull.jpg" style="width: 250px" />
+            <img class="fragment" src="res/boring.jpg" style="width: 250px"/>
+            <img class="fragment" src="res/waste.gif" style="width: 250px" />
+          </section>
+          <section>
+            <img src="res/boat-faceplant.gif" style="height: 500px" />
+          </section>
+          <section>
+            <img src="res/yunotest.png" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>TDD to the rescue!</h2>
+            <blockquote class="fragment">
+              Hey, it gets better if you write the tests first
+            </blockquote>
+            <ul>
+              <li class="fragment">distributes the pain of testing evenly through development</li>
+              <li class="fragment">encourages simple design</li>
+            </ul>
+          </section>
+          <section>
+            <img src="res/mckayla.jpg" />
+          </section>
+          <section>
+            <ul>
+              <li>How much to test in each test procedure?</li>
+              <li class="fragment">Good names for tests?</li>
+              <li class="fragment">Functional, unit, integration</li>
+              <li class="fragment">Fakes, mocks</li>
+              <li class="fragment">Aim for 100% code coverage?</li>
+            </ul>
+            <br />
+            <img class="fragment" src="res/failed.png" />
+          </section>
+          <section>
+            <blockquote>
+              The first mistake after learning how to use a cool new tool
+              is over-using it
+            </blockquote>
+          </section>
+          <section>
+            <h3>Tests are important</h3>
+            <br />
+            <h2 class="fragment">
+              But not more important than the code itself
+            </h3>
+            <br />
+            <h3 class="fragment">Tests are just a tool, not the product</h3>
+          </section>
+        </section>
+        <section>
+          <ul>
+            <li>To hell with code coverage!</li>
+            <li class="fragment">Test the features, not the implementation</li>
+            <li class="fragment">Only high level tests</li>
+          </ul>
+          <h3 class="bdd fragment">BDD</h3>
+        </section>
+        <section>
+          <h2>BDD in Node.js?</h2>
+          <ul>
+            <li class="fragment">
+              Assertion library
+              <ul class="fragment">
+                <li>Node.js core assert module</li>
+                <li class="fragment">should.js</li>
+                <li class="fragment">chai</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Testing framework
+              <ul class="fragment">
+                <li class="fragment">Mocha</li>
+                <li class="fragment">Vows</li>
+                <li class="fragment">Specify</li>
+                <li class="fragment">NodeUnit</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Not using a testing framework</h2>
+            <h3>Just an assertion library</h3>
+          </section>
+          <section>
+            <h1>Mocha</h1>
+            <ul>
+              <li class="fragment">Use any assertion library that throws an error</li>
+              <li class="fragment">Use a variety of reporters</li>
+              <li class="fragment">File watch!</li>
+              <li class="fragment"><a href="https://github.com/visionmedia/node-growl">Growl!</a></li>
+              <li class="fragment">Async testing</li>
+              <li class="fragment">Slow tests detection</li>
+              <li class="fragment">Debug</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>Questions?</h1>
+        </section>
+        <section>
+          <h1>Thank you!</h1>
+        </section>
+      </div>
+    </div>
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.min.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            
+            // available themes are in /css/theme
+            theme: Reveal.getQueryHash().theme,
+            
+            // default/cube/page/concave/zoom/linear/none
+            transition: Reveal.getQueryHash().transition || 'default',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+    </script>
+  </body>
+</html>
